@@ -28,8 +28,14 @@ def graficar(x, y):
     '''
     fig, ax = plt.subplots(figsize=(16, 9))
     ax.plot(x, y)
-    ax.get_xaxis().set_visible(False)
+    ax.get_xaxis().set_visible(True)
 
+    # Código agregado para visualizar datos en gráfico.
+    ax.set_facecolor('whitesmoke')
+    ax.set_ylabel("Edad")
+    ax.set_xlabel("Id")
+    ax.grid(ls='dashdot')
+    
     # Convertir ese grafico en una imagen para enviar por HTTP
     # y mostrar en el HTML
     image_html = io.BytesIO()
